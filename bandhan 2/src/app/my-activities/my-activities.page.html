@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="options-outline" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">My Activities</ion-title>
+    <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3>Daily Activities Table</h3>
+  <ion-row class="row">
+    <ion-col size="3">
+      <p>Date</p>
+    </ion-col>
+    <ion-col size="3">
+      <p>Product Name</p>
+    </ion-col>
+    <ion-col size="3">
+      <p>Invoice No.</p>
+    </ion-col>
+    <ion-col size="3">
+      <p>Sale Amount</p>
+    </ion-col>
+  </ion-row>
+  <!-- data -->
+  <div *ngFor="let item of items">
+    <ion-row class="row1">
+      <ion-col size="3">
+        <h5>03 March</h5>
+      </ion-col>
+      <ion-col size="3">
+        <h5>Product Name</h5>
+      </ion-col>
+      <ion-col size="3">
+        <h5>#523</h5>
+      </ion-col>
+      <ion-col size="3">
+        <h5>5426</h5>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row2">
+      <ion-col size="3">
+        <h5>23 March</h5>
+      </ion-col>
+      <ion-col size="3">
+        <h5>Product Name</h5>
+      </ion-col>
+      <ion-col size="3">
+        <h5>#123</h5>
+      </ion-col>
+      <ion-col size="3">
+        <h5>3426</h5>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

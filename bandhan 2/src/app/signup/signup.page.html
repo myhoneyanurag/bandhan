@@ -1,0 +1,75 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <form [formGroup]="signupForm">
+    <img src="assets/icon/logo2.png">
+    <h3>Sign Up</h3>
+    <ion-item>
+      <ion-input placeholder="Name" type="text" formControlName="name" minlength="3"></ion-input>
+      <ion-icon name="person" slot="end" class="icon"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="signupForm.get('name').errors && signupForm.get('name').touched || signupForm.get('name').dirty">
+      <div *ngIf="signupForm.controls['name'].hasError('required')"><span class="validateMessage">*Please fill out this
+          field</span></div>
+      <div *ngIf="signupForm.controls['name'].hasError('minlength')"><span class="validateMessage">
+          *Name must be at least 3 characters long.</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Email" type="email" formControlName="email"></ion-input>
+      <ion-icon name="mail" slot="end" class="icon"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="signupForm.get('email').errors && signupForm.get('email').touched || signupForm.get('email').dirty">
+      <div *ngIf="signupForm.controls['email'].hasError('required')"><span class="validateMessage">*Please fill out this
+          field</span></div>
+      <div *ngIf="signupForm.controls['email'].hasError('pattern')"><span class="validateMessage">
+          *Please enter the valid email.</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Mobile" type="tel" formControlName="mobile" minlength="4" maxlength="12"></ion-input>
+      <ion-icon name="calculator" slot="end" class="icon"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="signupForm.get('mobile').errors && signupForm.get('mobile').touched || signupForm.get('mobile').dirty">
+      <div *ngIf="signupForm.controls['mobile'].hasError('required')"> <span class="validateMessage">
+          *Please fill out this field</span></div>
+    </div>
+    <!-- <ion-item>
+    <ion-input placeholder="Password" type="password"></ion-input>
+    <ion-icon name="lock-closed" slot="end" class="icon"></ion-icon>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Confirm Password" type="password"></ion-input>
+    <ion-icon name="lock-closed" slot="end" class="icon"></ion-icon>
+  </ion-item> -->
+    <ion-button expand="block" size="large" (click)="onVerification()" [disabled]="!signupForm.valid">Sign Up
+    </ion-button>
+    <p class="p">Sign Up With Social Accounts </p>
+
+    <ion-row style="margin-top: 25px;">
+      <ion-col size="4">
+
+      </ion-col>
+      <ion-col size="2" class="col">
+        <img src="assets/icon/fb.png" class="img">
+      </ion-col>
+      <ion-col size="2" class="col">
+        <img src="assets/icon/goggle.png" class="img">
+      </ion-col>
+      <ion-col size="4">
+
+      </ion-col>
+    </ion-row>
+    <p style="text-align: center;font-size: 14px; margin-top: 5%;">Don't have an account?
+      <ion-label class="la" (click)="onSignIn()">SIGN IN</ion-label>
+    </p>
+  </form>
+
+</ion-content>

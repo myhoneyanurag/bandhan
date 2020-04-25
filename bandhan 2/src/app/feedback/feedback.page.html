@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="options-outline" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Feedback</ion-title>
+    <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="div">
+    <p>"I would love to hear your comments because I'm sure you have more suggestions on how to make a better platform"
+    </p>
+  </div>
+  <form [formGroup]="feedBack">
+    <div style="margin-left: 30px;margin-right: 30px;border-bottom: 1px solid;margin-top: 100px;">
+      <ion-textarea type="textarea" placeholder="Your Comments" formControlName="comments"></ion-textarea>
+    </div>
+    <div style="padding-left: 35px;"
+      *ngIf="feedBack.get('comments').errors && feedBack.get('comments').touched || feedBack.get('comments').dirty">
+      <div *ngIf="feedBack.controls['comments'].hasError('required')"><span class="validateMessage">*Please fill out
+          this field.</span></div>
+    </div>
+
+    <ion-item style="margin: 14px;">
+      <ion-input placeholder="Your Name" type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="feedBack.get('name').errors && feedBack.get('name').touched || feedBack.get('name').dirty">
+      <div *ngIf="feedBack.controls['name'].hasError('required')"><span class="validateMessage">*Please fill out this
+          field</span></div>
+      <div *ngIf="feedBack.controls['name'].hasError('minlength')"><span class="validateMessage">
+          *Name must be at least 3 characters long.</span></div>
+    </div>
+
+    <ion-item style="margin: 14px;">
+      <ion-input placeholder="Mobile" type="tel" formControlName="mobileno" minlength="4" maxlength="12"></ion-input>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="feedBack.get('mobileno').errors && feedBack.get('mobileno').touched || feedBack.get('mobileno').dirty">
+      <div *ngIf="feedBack.controls['mobileno'].hasError('required')"><span class="validateMessage">*Please fill out
+          this field</span></div>
+      <!-- <div
+        *ngIf="feedBack.controls['mobileno'].hasError('pattern') && feedBack.controls['mobileno'].hasError('minlength') && uploadActivity.controls['mobileno'].hasError('maxlength')">
+        <span style="color:red;font-size:12px">
+          *Please enter the valid Mobile no.</span></div> -->
+    </div>
+    <br><br>
+    <ion-button size="large" expand="block" class="btn">Send</ion-button>
+  </form>
+</ion-content>

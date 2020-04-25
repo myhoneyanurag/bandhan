@@ -1,0 +1,184 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="options-outline" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Rank</ion-title>
+    <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <super-tabs>
+    <super-tabs-toolbar slot="top" color="light">
+      <super-tab-button>
+        <ion-label>your Performance</ion-label>
+      </super-tab-button>
+
+      <super-tab-button>
+        <ion-label>Group Performance</ion-label>
+      </super-tab-button>
+
+    </super-tabs-toolbar>
+
+    <super-tabs-container>
+      <super-tab>
+        <ion-content>
+          <ion-radio-group>
+            <ion-row>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-radio mode="md"></ion-radio>
+                  <p>Monthly</p>
+                </ion-item>
+              </ion-col>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-radio mode="md"></ion-radio>
+                  <p>Weekly</p>
+                </ion-item>
+              </ion-col>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-radio mode="md"></ion-radio>
+                  <p>Yearly</p>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-radio-group>
+          <div style="margin-left: 30%;margin-right: 30%;border-bottom: 1px solid gray;">    
+                  <ion-select value="sm" okText="Okay" cancelText="Dismiss" interface="popover">
+            <ion-select-option value="sm">Select month</ion-select-option>
+            <ion-select-option value="jan">January</ion-select-option>
+            <ion-select-option value="feb">February</ion-select-option>
+            <ion-select-option value="mar">March</ion-select-option>
+            <ion-select-option value="apr">April</ion-select-option>
+            <ion-select-option value="may">May</ion-select-option>
+            <ion-select-option value="jun">June</ion-select-option>
+            <ion-select-option value="jul">July</ion-select-option>
+            <ion-select-option value="aug">August</ion-select-option>
+            <ion-select-option value="sep">September</ion-select-option>
+            <ion-select-option value="oct">October</ion-select-option>
+            <ion-select-option value="nov">November</ion-select-option>
+            <ion-select-option value="dec">December</ion-select-option>
+          </ion-select>
+        </div>
+
+          <img style="width: 100%;" src="assets/icon/bar.png">
+          <ion-row>
+            <ion-col size="4">
+              <ion-card>
+                <h3>-</h3>
+                <p class="p1">Total Sale</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="4">
+              <ion-card style="background: white;">
+                <h3 style="color: black;">-</h3>
+                <p style="color: black;text-align: center;">Points Earned</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="4">
+              <ion-card>
+                <h3>-</h3>
+                <p class="p1">Rank</p>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-content>
+      </super-tab>
+      <!-- 2nd tab -->
+      <super-tab>
+        <ion-content>
+          <ion-radio-group>
+            <ion-row>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-radio mode="md"></ion-radio>
+                  <p>Monthly</p>
+                </ion-item>
+              </ion-col>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-radio mode="md"></ion-radio>
+                  <p>Weekly</p>
+                </ion-item>
+              </ion-col>
+              <ion-col size="4">
+                <ion-item>
+                  <ion-radio mode="md"></ion-radio>
+                  <p>Yearly</p>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-radio-group>
+
+          <ion-row>
+            <ion-col size="4" class="col">
+              <ion-select value="sm" okText="Okay" cancelText="Dismiss" interface="popover">
+                <ion-select-option value="sm">Select month</ion-select-option>
+                <ion-select-option value="jan">January</ion-select-option>
+                <ion-select-option value="feb">February</ion-select-option>
+                <ion-select-option value="mar">March</ion-select-option>
+                <ion-select-option value="apr">April</ion-select-option>
+                <ion-select-option value="may">May</ion-select-option>
+                <ion-select-option value="jun">June</ion-select-option>
+                <ion-select-option value="jul">July</ion-select-option>
+                <ion-select-option value="aug">August</ion-select-option>
+                <ion-select-option value="sep">September</ion-select-option>
+                <ion-select-option value="oct">October</ion-select-option>
+                <ion-select-option value="nov">November</ion-select-option>
+                <ion-select-option value="dec">December</ion-select-option>
+              </ion-select>
+            </ion-col>
+            <ion-col size="4" class="col">
+              <ion-select value="grp" okText="Okay" cancelText="Dismiss" interface="popover">
+                <ion-select-option value="grp">Groups</ion-select-option>
+              </ion-select>
+            </ion-col>
+            <ion-col size="4" class="col">
+              <ion-select value="worker" okText="Okay" cancelText="Dismiss" interface="popover">
+                <ion-select-option value="worker">Workers</ion-select-option>
+              </ion-select>
+            </ion-col>
+          </ion-row>
+          <img style="width: 100%;" src="assets/icon/bar.png">
+          <ion-row>
+            <ion-col size="3">
+              <ion-card>
+                <h3>-</h3>
+                <p class="p1">Total Sale</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="3">
+              <ion-card style="background: white;">
+                <h3 style="color: black;">-</h3>
+                <p style="color: black;text-align: center;">Points Earned</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="3">
+              <ion-card>
+                <h3>-</h3>
+                <p class="p1">Group Rank</p>
+              </ion-card>
+            </ion-col>
+            <ion-col size="3">
+              <ion-card style="background: white;">
+                <h3 style="color: black;">-</h3>
+                <p style="color: black;text-align: center;">Total Member</p>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <div style="text-align: center;">
+            <ion-button class="btn" size="large" (click)="presentAlertRadio()">Request For Group Change</ion-button>
+          </div>
+
+        </ion-content>
+      </super-tab>
+    </super-tabs-container>
+  </super-tabs>
+</ion-content>

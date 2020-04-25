@@ -1,0 +1,35 @@
+.icon{
+    margin-right: 10px;
+    font-size: 25px;
+    color: white;
+}
+ion-toolbar{
+    --background: rgb(50, 150, 153);
+}
+h4{
+    margin-left: 15px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: gray;
+    font-weight: 600;
+    font-family: serif;
+}
+p{
+    font-weight: 600;
+    font-family: serif;
+    color: gray;
+    text-align: start;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+ion-toggle{
+    --handle-background-checked: rgb(50, 150, 153);
+    --background-checked: rgb(50, 150, 153);
+
+}
+hr{
+    margin-top: 0;
+    background: lightgray;
+}

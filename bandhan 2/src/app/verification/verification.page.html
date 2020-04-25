@@ -1,0 +1,30 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <img src="assets/icon/logo2.png">
+  <h3>Verification</h3>
+  <ion-item>
+    <ion-input placeholder="OTP Code" type="number"></ion-input>
+    <ion-icon name="lock-open" slot="end" class="icon"></ion-icon>
+  </ion-item>
+  <ion-row>
+    <ion-col size="1" style="margin-left: 20px;">
+      <ion-icon name="refresh-outline" class="icon1"></ion-icon>
+    </ion-col>
+    <ion-col size="4">
+      <p>Resend OTP</p>
+    </ion-col>
+    <!-- <ion-col size="1" style="margin-left: -25px;">
+      <ion-icon name="pencil-outline" class="icon1"></ion-icon>
+    </ion-col>
+    <ion-col size="4">
+      <p>Edit Number</p>
+    </ion-col> -->
+  </ion-row>
+  <ion-button expand="block" size="large" (click)="onAppro()">Verify Otp</ion-button>
+
+</ion-content>

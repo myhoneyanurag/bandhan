@@ -1,0 +1,32 @@
+.icon{
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  ion-card{
+    background: salmon;
+    padding-bottom: 10px;
+  }
+  p{
+    color: white;
+      font-size: small;
+      text-align: center;
+      margin-bottom: 0px;
+      margin-top: 0px;
+  }
+  .img{
+    width: 76%;
+    margin: 6%;
+  }
+  .slide-img{
+    height: 175px;
+    border-radius: 23px;
+  }
+  ion-slides{
+    --bullet-background-active:salmon;	
+  }
+  ion-item{
+      --border-style: none;
+  }
+  ion-radio{
+      --color-checked:salmon;
+  }

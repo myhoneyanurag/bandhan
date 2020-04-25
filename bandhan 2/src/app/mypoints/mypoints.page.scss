@@ -1,0 +1,60 @@
+.icon{
+    margin-right: 10px;
+    font-size: 25px;
+    color: white;
+}
+ion-toolbar{
+    --background: rgb(50, 150, 153);
+}
+p{
+    text-align: center;
+    font-weight: 600;
+    color: gray;
+    font-family: serif;
+}
+h3{
+    font-size: 20px;
+    text-align: center;
+    color: gray;
+}
+hr{
+    background: lightgray;
+}
+.p1{
+    font-weight: 600;
+    color: gray;
+    font-family: serif;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: smaller;
+    text-align: start;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.p2{
+margin-left: 3px;
+    margin-top: 1px;
+    font-size: small;
+}
+ion-radio{
+    height: 15px;
+    width: 15px;
+}
+.row1{
+    justify-content: center;
+}
+.la{
+font-size: x-small;
+}
+ion-button{
+    margin-top: 10px;
+    margin-left: 10px;
+    --background: rgb(50, 150, 153);
+}
+.icon2{
+    font-size: 15px;
+}
+ion-select{
+    --padding-end:true;
+    max-width: fit-content;
+}
