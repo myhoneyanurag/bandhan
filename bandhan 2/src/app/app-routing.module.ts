@@ -88,14 +88,6 @@ const routes: Routes = [
     path: 'schemes',
     loadChildren: () => import('./schemes/schemes.module').then( m => m.SchemesPageModule)
   },
-  {
-    path: 'nameste',
-    loadChildren: () => import('./nameste/nameste.module').then( m => m.NamestePageModule)
-  },
-  {
-    path: 'product',
-    loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
-  },
 ];
 
 @NgModule({

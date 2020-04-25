@@ -14,7 +14,6 @@ ion-item {
     // margin-right: 15px;
     --highlight-color-focused: rgb(50, 150, 153);
     --border-color: black;
-    --padding-start: 0x;
 }
 
 .radio {
@@ -51,25 +50,19 @@ mat-step {
     background-color: rgb(50, 150, 153);
 }
 
-ion-button.saveSign {
-    font-size: medium;
-    margin-top: 40px;
-    --background: #156D89;
-    width: 100%;
-    height: 65px;
-    margin: 40px auto;
+ion-button {
+    --border-color: rgb(50, 150, 153);
+    color: rgb(50, 150, 153);
+    margin-bottom: 20px;
 }
 
 .pointsLine {
-    font-size: 13px;
-    color: #2a2a2a;
-    font-weight: bolder;
-    border: 1px solid #cecece;
-    padding: 20px;
-    border-style: dashed;
+    font-size: smaller;
+    color: black;
+    margin: 10px;
+    // font-family: cursive;
+    font-weight: bolder
 }
-
-ion-button.upload{ height: 38px; font-size: 13px; }
 
 // .validateMessage {
 //     color: red;

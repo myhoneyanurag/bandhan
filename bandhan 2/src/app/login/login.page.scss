@@ -1,6 +1,5 @@
 h3{
     margin-left: 15px;
-    color:#494343;
 }
 .icon{
     font-size: 20px;
@@ -14,12 +13,11 @@ ion-item{
     --border-color: black;
 }
 ion-button{
+    margin-left: 15px;
+    margin-right: 15px;
     font-size: medium;
     margin-top: 40px;
-    --background: #156D89;
-    width: 90%;
-    height: 65px;
-    margin: 40px auto;
+    --background: rgb(50, 150, 153);
 }
 .p{
     text-align: center;

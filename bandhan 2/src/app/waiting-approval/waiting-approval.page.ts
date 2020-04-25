@@ -27,7 +27,7 @@ export class WaitingApprovalPage implements OnInit {
         }
       ],
     });
-    this.router.navigate(['/nameste']);
+    this.router.navigate(['/home']);
     await alert.present();
   }
 }

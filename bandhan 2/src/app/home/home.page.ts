@@ -33,7 +33,4 @@ export class HomePage {
   onScheme() {
     this.router.navigate(['/schemes']);
   }
-  myPoints(){
-    this.router.navigate(['/mypoints']);
-  }
 }

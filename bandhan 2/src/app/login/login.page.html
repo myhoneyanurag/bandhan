@@ -8,20 +8,18 @@
   <img src="assets/icon/logo2.png">
   <h3>Sign In</h3><br><br>
   <ion-item>
-    <ion-input   placeholder="Mobile/Email" minlength="10" type="text"></ion-input>
+    <ion-input placeholder="Mobile/Email" type="text"></ion-input>
     <ion-icon name="person" slot="end" class="icon"></ion-icon>
   </ion-item>
-  <div style="padding-left: 35px">
-   
-  </div>
   <ion-item>
     <ion-input placeholder="Password" type="password"></ion-input>
     <ion-icon name="eye" slot="end" class="icon"></ion-icon>
   </ion-item>
-  <!-- <div style="text-align: end;margin-right: 15px;">
+  <div style="text-align: end;margin-right: 15px;">
     <ion-label>Forgot Password?</ion-label>
-  </div> -->
-  <ion-button mode="ios" expand="block" size="large" (click)="onLogIn()">Sign In</ion-button>
+  </div>
+  <ion-button expand="block" size="large" (click)="onLogIn()">Sign In</ion-button>
+
   <p class="p">Sign In With Social Accounts </p>
 
   <ion-row style="margin-top: 25px;">
@@ -38,7 +36,7 @@
 
     </ion-col>
   </ion-row>
-  <p style="text-align: center;font-size: 14px; margin-top: 5%;">Don't have an account?
+  <p style="text-align: center;font-size: 12px;margin-top: 5%;">Don't have an account?
     <ion-label class="la" (click)="onSignUp()">SIGN UP</ion-label>
   </p>
 </ion-content>

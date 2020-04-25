@@ -11,7 +11,7 @@
         <ion-item>
           <ion-input placeholder="First Name" type="text" formControlName="firstname"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="firstStepper.get('firstname').errors && firstStepper.get('firstname').touched || firstStepper.get('firstname').dirty">
           <div *ngIf="firstStepper.controls['firstname'].hasError('required')"> <span class="validateMessage">
               *Please fill out this field</span></div>
@@ -26,7 +26,7 @@
         <ion-item>
           <ion-input placeholder="Last Name" type="text" formControlName="lastname"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="firstStepper.get('lastname').errors && firstStepper.get('lastname').touched || firstStepper.get('lastname').dirty">
           <div *ngIf="firstStepper.controls['lastname'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -39,7 +39,7 @@
         <ion-item>
           <ion-input placeholder="Address" type="text" formControlName="address"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="firstStepper.get('address').errors && firstStepper.get('address').touched || firstStepper.get('address').dirty">
           <div *ngIf="firstStepper.controls['address'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -47,7 +47,7 @@
         <ion-item>
           <ion-input placeholder="Pincode" type="tel" formControlName="pincode" maxlength="6"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="firstStepper.get('pincode').errors && firstStepper.get('pincode').touched || firstStepper.get('pincode').dirty">
           <div *ngIf="firstStepper.controls['pincode'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -57,7 +57,7 @@
         <ion-item>
           <ion-input placeholder="Mobile No." type="tel" formControlName="mobile" maxlength="10"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="firstStepper.get('mobile').errors && firstStepper.get('mobile').touched || firstStepper.get('mobile').dirty">
           <div *ngIf="firstStepper.controls['mobile'].hasError('required')"> <span class="validateMessage"> *Please fill
               out this field</span></div>
@@ -65,7 +65,7 @@
         <ion-item>
           <ion-input placeholder="Email" type="email" formControlName="email"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="firstStepper.get('email').errors && firstStepper.get('email').touched || firstStepper.get('email').dirty">
           <div *ngIf="firstStepper.controls['email'].hasError('required')"> <span class="validateMessage"> *Please fill
               out this field</span></div>
@@ -89,13 +89,13 @@
           <ion-row style="height: 60px;">
             <ion-col size="5">
               <ion-item class="radio">
-                <ion-radio mode="md" type="radio" formControlName="gndr" value=1 checked></ion-radio>
+                <ion-radio type="radio" formControlName="gndr" value=1 checked></ion-radio>
                 <p style="margin-left: 5px;"> Male</p>
               </ion-item>
             </ion-col>
             <ion-col size="5">
               <ion-item class="radio">
-                <ion-radio mode="md"  type="radio" formControlName="gndr" value=0></ion-radio>
+                <ion-radio type="radio" formControlName="gndr" value=0></ion-radio>
                 <p style="margin-left: 5px;"> Female</p>
               </ion-item>
             </ion-col>
@@ -103,8 +103,8 @@
         </ion-radio-group>
         <!-- (click)="onclick('Identity Proof')" -->
         <div style="text-align: center;">
-          <ion-button class="saveSign" matStepperNext (click)="onclick(stepper,'Identity Proof')" [disabled]="!firstStepper.valid">Save &
-            Next</ion-button>
+          <button matStepperNext (click)="onclick(stepper,'Identity Proof')" [disabled]="!firstStepper.valid">Save &
+            Next</button>
           <!-- <button (click)="goBack(stepper)" type="button">Back</button> -->
         </div>
         <p class="pointsLine">You can score 100 points if you upload Profile pic now!!</p>
@@ -119,7 +119,7 @@
         <ion-item>
           <ion-input placeholder="Name as per Aadhaar" type="text" formControlName="adharname"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="secondStepper.get('adharname').errors && secondStepper.get('adharname').touched || secondStepper.get('adharname').dirty">
           <div *ngIf="secondStepper.controls['adharname'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -133,14 +133,14 @@
         <ion-item>
           <ion-input placeholder="Aadhar Card No." type="text" formControlName="adharno"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="secondStepper.get('adharno').errors && secondStepper.get('adharno').touched || secondStepper.get('adharno').dirty">
           <div *ngIf="secondStepper.controls['adharno'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
           <div *ngIf="secondStepper.controls['adharno'].hasError('pattern')"> <span class="validateMessage">
               *Please enter valid aadhar no.</span></div>
         </div>
-        <ion-button class="upload" fill="outline" style="font-size: x-small">
+        <ion-button fill="outline" style="font-size: x-small">
           <ion-icon name="cloud-upload"></ion-icon>
           &nbsp;
           Upload Aadhar card
@@ -148,7 +148,7 @@
         <ion-row>
           <ion-col size="1">
             <ion-radio-group>
-              <ion-radio mode="md" style="margin-top: 3px;"></ion-radio>
+              <ion-radio style="margin-top: 3px;"></ion-radio>
             </ion-radio-group>
           </ion-col>
           <ion-col size="11">
@@ -159,7 +159,7 @@
         <ion-item>
           <ion-input placeholder="Name as per PAN" type="text" formControlName="panname"></ion-input>
         </ion-item>
-        <div 
+        <div style="padding-left: 20px;"
           *ngIf="secondStepper.get('panname').errors && secondStepper.get('panname').touched || secondStepper.get('panname').dirty">
           <div *ngIf="secondStepper.controls['panname'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -172,14 +172,14 @@
         <ion-item>
           <ion-input placeholder="Pan Card No." type="text" formControlName="panno"></ion-input>
         </ion-item>
-        <div 
+        <div style="padding-left: 20px;"
           *ngIf="secondStepper.get('panno').errors && secondStepper.get('panno').touched || secondStepper.get('panno').dirty">
           <div *ngIf="secondStepper.controls['panno'].hasError('required')"> <span class="validateMessage"> *Please fill
               out this field</span></div>
           <div *ngIf="secondStepper.controls['panno'].hasError('pattern')"> <span class="validateMessage">
               *Please enter valid aadhar no.</span></div>
         </div>
-        <ion-button class="upload" fill="outline">
+        <ion-button fill="outline" style="font-size: x-small">
           <ion-icon name="cloud-upload"></ion-icon>
           &nbsp;
           Upload Pan card
@@ -195,8 +195,8 @@
           </ion-col>
         </ion-row>
         <div style="text-align: center;">
-          <ion-button class="saveSign" mat-button matStepperNext (click)="onclick(stepper,'Bank Details')"
-            [disabled]="!secondStepper.valid">Save & Next</ion-button>
+          <button mat-button matStepperNext (click)="onclick(stepper,'Bank Details')"
+            [disabled]="!secondStepper.valid">Save & Next</button>
         </div>
       </form>
     </mat-step>
@@ -207,7 +207,7 @@
         <ion-item>
           <ion-input placeholder="Account Holder Name" type="text" formControlName="accholdername"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="thirdStepper.get('accholdername').errors && thirdStepper.get('accholdername').touched || thirdStepper.get('accholdername').dirty">
           <div *ngIf="thirdStepper.controls['accholdername'].hasError('required')"> <span class="validateMessage">
               *Please fill out this field</span></div>
@@ -222,7 +222,7 @@
         <ion-item>
           <ion-input placeholder="Account No" type="text" formControlName="accountno"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="thirdStepper.get('accountno').errors && thirdStepper.get('accountno').touched || thirdStepper.get('accountno').dirty">
           <div *ngIf="thirdStepper.controls['accountno'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -230,7 +230,7 @@
         <ion-item>
           <ion-input placeholder="Confirm Account No" type="text" formControlName="confrmAccountNo"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="thirdStepper.get('confrmAccountNo').errors && thirdStepper.get('confrmAccountNo').touched || thirdStepper.get('confrmAccountNo').dirty">
           <div *ngIf="thirdStepper.controls['confrmAccountNo'].hasError('required')"> <span class="validateMessage">
               *Please fill out this field</span></div>
@@ -238,7 +238,7 @@
         <ion-item>
           <ion-input placeholder="Bank Name" type="text" formControlName="bankname"></ion-input>
         </ion-item>
-        <div style=""
+        <div style="padding-left: 20px;"
           *ngIf="thirdStepper.get('bankname').errors && thirdStepper.get('bankname').touched || thirdStepper.get('bankname').dirty">
           <div *ngIf="thirdStepper.controls['bankname'].hasError('required')"> <span class="validateMessage"> *Please
               fill out this field</span></div>
@@ -275,16 +275,16 @@
 
         <ion-grid>
           <ion-row>
-            <ion-col size="6">
-              <ion-button class="upload" fill="outline" style="font-size: 10px;">
+            <ion-col size="8">
+              <ion-button fill="outline" style="font-size: x-small;">
                 <ion-icon name="cloud-upload"></ion-icon>
                 &nbsp;
                 Upload Bank Document
               </ion-button>
             </ion-col>
-            <ion-col size="6">
-              <p style="font-size: 12px">Document:</p>
-              <p style="font-size: 12px;">Cheque Photo or Passbook Copy</p>
+            <ion-col size="4">
+              <p style="font-size: xx-small;">Document:</p>
+              <p style="font-size: xx-small;">Cheque Photo or Passbook Copy</p>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -293,7 +293,7 @@
         <ion-row>
           <ion-col size="1">
             <ion-radio-group>
-              <ion-radio mode="md" style="margin-top: 3px;"></ion-radio>
+              <ion-radio style="margin-top: 3px;"></ion-radio>
             </ion-radio-group>
           </ion-col>
           <ion-col size="11">
@@ -301,7 +301,7 @@
           </ion-col>
         </ion-row>
         <div style="text-align: center;">
-          <ion-button class="saveSign" mat-button matStepperNext (click)="onNext()">Save & Next</ion-button>
+          <button mat-button matStepperNext (click)="onNext()">Save & Next</button>
         </div>
       </form>
 

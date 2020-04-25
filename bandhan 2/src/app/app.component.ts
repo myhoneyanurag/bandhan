@@ -121,55 +121,9 @@ export class AppComponent {
             console.log('Confirm Ok');
           }
         }
-      ], 
-      mode:"ios"
+      ]
     });
     await alert.present();
     this.menuController.close();
   }
-
-  product(){
-    this.router.navigate(['/product']);
-    this.menuController.close();
-  }
-
-  async group(){
-     const alert = await this.alertController.create({
-      header: 'In which group the worker to come under?',
-      inputs: [
-        {
-          name: 's1',
-          type: 'radio',
-          label: 'Gold',
-          value: 'value1',
-          checked: true
-        },
-        {
-          name: 's2',
-          type: 'radio',
-          label: 'Silver',
-          value: 'value2'
-        },
-        {
-          name: 's3',
-          type: 'radio',
-          label: 'Bonze',
-          value: 'value3'
-        }
-      ],
-      buttons: [
-       {
-          text: 'Send Request To Administrator',
-          handler: () => {
-            console.log('Confirm Ok');
-          }
-        }
-      ],
-
-      mode: "ios"
-    });
-    await alert.present();
-    this.menuController.close();
-  }
-
 }

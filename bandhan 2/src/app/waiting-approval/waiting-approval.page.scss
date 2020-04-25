@@ -11,44 +11,25 @@
 h1 {
     margin-top: 10px;
     font-size: 23px;
-    
+    font-family: cursive;
     color: gray;
     font-weight: 600;
 }
 
 p {
-    font-size: 15px;
-    color: #393939;
+    font-size: smaller;
+    color: gray;
     margin: 10px;
-    padding: 20px 22px;
-    line-height: 35px;
-    
+    font-family: cursive;
 
 }
 
-.ref{
+ion-button {
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: medium;
-    background: #156D89;
-    width: 90%;
-    height: 65px;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-ion-button{
-    font-size: medium;
-    margin-top: 40px;
-    --background: #156D89;
-    width: 90%;
-    height: 65px;
-    margin: 40px auto;
+    margin-top: 30%;
+    --background: rgb(50, 150, 153);
 }
 
 .alert {
