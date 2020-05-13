@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Identity Proof</ion-title>
+    <!-- <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons> -->
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="identifyProof">
+    <ion-item>
+      <ion-input placeholder="Name as per Aadhaar" type="text" formControlName="adharname"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="identifyProof.get('adharname').errors && identifyProof.get('adharname').touched || identifyProof.get('adharname').dirty">
+      <div *ngIf="identifyProof.controls['adharname'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+      <div *ngIf="identifyProof.controls['adharname'].hasError('minlength')">
+        <span class="validateMessage">
+          *Name must be at least 3 characters long.</span></div>
+      <div *ngIf="identifyProof.controls['adharname'].hasError('pattern') ">
+        <span class="validateMessage">
+          *Please enter valid name.</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Aadhar Card No." type="tel" maxlength="12" formControlName="adharno"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="identifyProof.get('adharno').errors && identifyProof.get('adharno').touched || identifyProof.get('adharno').dirty">
+      <div *ngIf="identifyProof.controls['adharno'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+      <div *ngIf="identifyProof.controls['adharno'].hasError('pattern')"> <span class="validateMessage">
+          *Please enter valid aadhar no.</span></div>
+      <div *ngIf="identifyProof.controls['adharno'].hasError('minlength')"> <span class="validateMessage">
+          *Aadhar number should be 12 digit</span></div>
+    </div>
+    <div style="display: flex;">
+      <ion-button class="upload" fill="outline" style="font-size: x-small" (click)="galleryfnc()">
+        <ion-icon name="cloud-upload"></ion-icon>
+        &nbsp;
+        Upload Aadhar card
+      </ion-button>
+      <div style="text-align: center;">
+        <p style="margin: 0px;">{{fileName}}</p>
+      </div>
+    </div>
+
+    <ion-row>
+      <ion-col size="1">
+        <ion-radio-group>
+          <ion-radio mode="md" style="margin-top: 3px;"></ion-radio>
+        </ion-radio-group>
+      </ion-col>
+      <ion-col size="11">
+        <p style="margin-top: 5px;">I dont have Aadhar Card</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-item>
+      <ion-input placeholder="Name as per PAN" type="text" formControlName="panname"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="identifyProof.get('panname').errors && identifyProof.get('panname').touched || identifyProof.get('panname').dirty">
+      <div *ngIf="identifyProof.controls['panname'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+      <div *ngIf="identifyProof.controls['panname'].hasError('minlength')"> <span class="validateMessage">
+          *Name must be at least 3 characters long.</span></div>
+      <div *ngIf="identifyProof.controls['panname'].hasError('pattern') ">
+        <span class="validateMessage">
+          *Please enter valid name.</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Pan Card No." type="text" formControlname="panno"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="identifyProof.get('panno').errors && identifyProof.get('panno').touched || identifyProof.get('panno').dirty">
+      <div *ngIf="identifyProof.controls['panno'].hasError('required')"> <span class="validateMessage"> *Please fill
+          out this field</span></div>
+      <div *ngIf="identifyProof.controls['panno'].hasError('pattern')"> <span class="validateMessage">
+          *Please enter valid aadhar no.</span></div>
+    </div>
+    <ion-button class="upload" fill="outline" style="font-size: x-small" (click)="galleryfnc()">
+      <ion-icon name="cloud-upload"></ion-icon>
+      &nbsp;
+      Upload Pan card
+    </ion-button>
+    <div style="text-align: center;">
+      <p style="margin: 0px;">{{fileName}}</p>
+    </div>
+    <ion-row>
+      <ion-col size="1">
+        <ion-radio-group>
+          <ion-radio style="margin-top: 3px;"></ion-radio>
+        </ion-radio-group>
+      </ion-col>
+      <ion-col size="11">
+        <p style="margin-top: 5px;">I dont have Pan Card</p>
+      </ion-col>
+    </ion-row>
+    <div style="text-align: center;">
+      <button class="saveSign" class="nav-btn pull-right" (click)="onsecondclick('Bank Details')">Save</button>
+    </div>
+  </form>
+</ion-content>

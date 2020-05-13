@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>newHome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides class="maiSlidebox" pager="true" [options]="slideOpts">
+    <ion-slide style="display: flex;
+    flex-direction: column;
+">
+      <div> <img style="height: 110px;
+        width: 100%;" src="assets/icon/logo2.png">
+      </div>
+      <div class="div">
+        <img style="width: 127px;" class="nam" src="assets/icon/nameste.png">
+        <div style="text-align: center; ">
+          <p class="nam" style="padding: 19px;
+            line-height: 23px;"> Your registration request for True Homes Bandhan is
+            successfully sent to Level 1 manager. And it may
+            take 1-2 business days for verification.
+          </p>
+        </div>
+      </div>
+      <ion-row style="margin-top: 25px; width: 100%;padding: 20px;">
+
+        <ion-col size="6">
+          <div class="card">
+            <div>
+              <img src="assets/icon/notification.png">
+            </div>
+            <p style="color: #fff;">Notification</p>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="card">
+            <div>
+              <ion-icon name="notifications" class="icon"></ion-icon>
+            </div>
+            <p style="color: #fff;">Need Work</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-slide>
+
+
+    <ion-slide>
+
+      ` <ion-row>
+        <ion-col size="2">
+          <ion-menu-button>
+            <ion-icon name="options-outline" style="font-size: 25px; color: #000;"></ion-icon>
+          </ion-menu-button>
+        </ion-col>
+        <ion-col size="8">
+
+        </ion-col>
+        <ion-col size="2" style="text-align: center;" (click)="onNotify()">
+          <ion-icon name="notifications" class="icon"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <img src="assets/icon/Banner1.png" class="slide-img" (click)="gotoPersonal()">
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/icon/Banner2.png" class="slide-img" (click)="gotoUpload()">
+        </ion-slide>
+      </ion-slides>
+
+      <ion-row style="margin-top: 25px;">
+
+        <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+          <ion-card (click)="onUpload()">
+            <img src="assets/icon/cat1.svg" class="img">
+            <p>UPLOAD</p>
+            <p>ACTIVITIES</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+          <ion-card (click)="myPoints()">
+            <img src="assets/icon/cat2.svg" class="img">
+            <p>YOUR</p>
+            <p>POINTS</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+
+        <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+          <ion-card (click)="onScheme()">
+            <img src="assets/icon/cat3.svg" class="img">
+            <p>NEW</p>
+            <p>SCHEMES</p>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+          <ion-card (click)="onRank()">
+            <img src="assets/icon/cat4.svg" class="img">
+            <p>CURRENT</p>
+            <p>RANK</p>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="options-outline" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Schemes</ion-title>
+    <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="background: aliceblue;" *ngFor="let items of schemeData">
+    <ion-row>
+      <ion-col size="4">
+        <img src="assets/icon/im1.png" style="margin-top: 25px;">
+      </ion-col>
+      <ion-col size="8">
+        <h4 style="color: aqua;">{{items.name}}</h4>
+        <p>{{items.description}}</p>
+        <p>Scheme End Date: {{items.scheme_end_date}}</p>
+        <p>Bounus Points: {{items.bonus_points}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

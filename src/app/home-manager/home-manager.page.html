@@ -1,0 +1,88 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>home-manager</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col size="2">
+      <ion-menu-button id="second">
+        <ion-icon name="options-outline" style="font-size: 25px;"></ion-icon>
+      </ion-menu-button>
+    </ion-col>
+    <ion-col size="8">
+      
+    </ion-col>
+    <ion-col size="2" style="text-align: center;" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+        </ion-col>
+  </ion-row>
+  <h4 class="ion-text-center">Select Category</h4>
+  <ion-radio-group>
+  <ion-row>
+    <ion-col size="6">
+      <ion-item style="margin-left: 20px;--border-style: none;">
+        <ion-radio></ion-radio>
+        <p style="color: black;margin-left: 10px;font-weight: 500;">Category One</p>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item >
+        <ion-radio></ion-radio>
+        <p style="color: black;margin-left: 10px;font-weight: 500;">Category Two</p>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item style="margin-left: 20px;--border-style: none;">
+        <ion-radio></ion-radio>
+        <p style="color: black;margin-left: 10px;font-weight: 500;">Category Three</p>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item >
+        <ion-radio></ion-radio>
+        <p style="color: black;margin-left: 10px;font-weight: 500;">Category Four</p>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-radio-group>
+
+  <ion-row style="margin-top: 25px;">
+    
+    <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+<ion-card>
+  <img src="assets/icon/im1.png" class="img">
+  <p>View All</p>
+  <p>ACTIVITIES</p>
+</ion-card>
+    </ion-col>
+   
+    <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+      <ion-card>
+        <img src="assets/icon/im1.png" class="img">
+        <p>Reward Points</p>
+        <p>To Worker</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    
+    <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+<ion-card>
+  <img src="assets/icon/im1.png" class="img">
+  <p>Upload NEW</p>
+  <p>SCHEMES</p>
+</ion-card>
+    </ion-col>
+   
+    <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+      <ion-card>
+        <img src="assets/icon/im1.png" class="img">
+        <p>View Workers</p>
+        <p>RANK</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

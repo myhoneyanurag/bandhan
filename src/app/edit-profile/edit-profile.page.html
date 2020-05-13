@@ -1,0 +1,154 @@
+<ion-header>
+
+  <!-- <div (click)="backSetting()">
+      <img style="margin-top: 5px;
+      width: 30px;
+      position: absolute;
+      z-index: 9999;" src="assets/icon/backbutton.png">
+    </div> -->
+  <!-- <ion-toolbar style="width: 100%;
+    position: relative;">
+    <ion-title style="background-color: cadetblue;">Edit Profile</ion-title>
+  </ion-toolbar> -->
+
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Edit Profile</ion-title>
+    <!-- <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons> -->
+  </ion-toolbar>
+
+</ion-header>
+<ion-content>
+  <form [formGroup]="editProfile">
+
+    <div style="text-align: center;
+    position: relative;
+    width: fit-content;
+    margin: auto;">
+      <ion-icon name="person-circle" class="icon" (click)="galleryfnc()"></ion-icon>
+      <!-- <div style="position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 35px;" ">
+        <img src="assets/images/camera2.png">
+      </div> -->
+
+      <p style="margin-top: 5px;">Upload Profile Photo</p>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Name" type="text" formControlName="firstname"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="editProfile.get('firstname').errors && editProfile.get('firstname').touched || editProfile.get('firstname').dirty">
+      <div *ngIf="editProfile.controls['firstname'].hasError('required')"> <span class="validateMessage">
+          *Please fill out this field</span></div>
+      <div *ngIf="editProfile.controls['firstname'].hasError('minlength') ">
+        <span class="validateMessage">*First name must be at least 3 characters long.</span> </div>
+      <div *ngIf="editProfile.controls['firstname'].hasError('pattern') ">
+        <span class="validateMessage">*Please enter valid name.</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Name" type="text" formControlName="lastName"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="editProfile.get('lastName').errors && editProfile.get('lastName').touched || editProfile.get('lastName').dirty">
+      <div *ngIf="editProfile.controls['lastName'].hasError('required')"> <span class="validateMessage">
+          *Please fill out this field</span></div>
+      <div *ngIf="editProfile.controls['lastName'].hasError('minlength') ">
+        <span class="validateMessage">*First name must be at least 3 characters long.</span> </div>
+      <div *ngIf="editProfile.controls['lastName'].hasError('pattern') ">
+        <span class="validateMessage">*Please enter valid name.</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Address" type="text" formControlName="address"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="editProfile.get('address').errors && editProfile.get('address').touched || editProfile.get('address').dirty">
+      <div *ngIf="editProfile.controls['address'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Pincode" type="tel" maxlength="6" formControlName="pincode"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="editProfile.get('pincode').errors && editProfile.get('pincode').touched || editProfile.get('pincode').dirty">
+      <div *ngIf="editProfile.controls['pincode'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+      <div *ngIf="editProfile.controls['pincode'].hasError('pattern')"> <span class="validateMessage">
+          *Pincode must be of 6 characters</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Mobile No." type="tel" maxlength="10" formControlName="mobile"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="editProfile.get('mobile').errors && editProfile.get('mobile').touched || editProfile.get('mobile').dirty">
+      <div *ngIf="editProfile.controls['mobile'].hasError('required')"> <span class="validateMessage"> *Please fill
+          out this field</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Email" type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <div *ngIf="editProfile.get('email').errors && editProfile.get('email').touched || editProfile.get('email').dirty">
+      <div *ngIf="editProfile.controls['email'].hasError('required')"> <span class="validateMessage"> *Please fill
+          out this field</span></div>
+      <div *ngIf="editProfile.controls['email'].hasError('pattern')"> <span class="validateMessage">
+          *Please enter the valid email.</span></div>
+    </div>
+    <ion-item>
+      <ion-datetime style="padding:0px" placeholder="Date" name="date" displayFormat="DD/MMM/YYYY" [max]="maxDate"
+        value="date" formControlName="dob">
+        {{birthDate}}
+      </ion-datetime>
+      <ion-icon name="calendar-outline" slot="end" class="icon1"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="editProfile.get('dob').errors && editProfile.get('dob').touched || editProfile.get('dob').dirty">
+      <div *ngIf="editProfile.controls['dob'].hasError('required')"> <span class="validateMessage"> *Field is
+          required</span></div>
+    </div>
+
+    <ion-list>
+      <ion-item (click)="workerAs()">
+        <ion-label>Working as</ion-label>
+        <ion-select (ionChange)="Change($event)" formControlName="workeras">
+          <ion-select-option *ngFor="let types of workerpopUp" [value]=types.id>
+            {{types.name}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+
+    <ion-radio-group formControlName="gender">
+      <ion-row style="height: 60px;">
+        <ion-col size="5">
+          <ion-item class="radio">
+            <ion-radio mode="md" type="radio" name="Male" value=Male checked></ion-radio>
+            <p style="margin-left: 5px;"> Male</p>
+          </ion-item>
+        </ion-col>
+        <ion-col size="5">
+          <ion-item class="radio">
+            <ion-radio mode="md" type="radio" name="Female" value=Female></ion-radio>
+            <p style="margin-left: 5px;"> Female</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <div style="text-align: center;">
+      <button class="saveSign" mat-raised-button matStepperNext class="nav-btn pull-right"
+        (click)="onclick('Identity Proof')" [disabled]="!editProfile.valid">Save</button>
+
+    </div>
+    <!-- <p class="pointsLine">You can score 100 points if you upload Profile pic now!!</p> -->
+  </form>
+
+</ion-content>

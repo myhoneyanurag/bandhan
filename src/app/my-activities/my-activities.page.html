@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="options-outline" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">My Activities</ion-title>
+    <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<h3>Daily Activities Table</h3>
+
+<ion-row class="upperrow">
+  <ion-col size="4">
+    <div class="tagsdot">
+      <div>
+        <img style="width: 15px;
+        margin-top: 13px;" src="assets/images/bluedot.png">
+      </div>
+      <div>
+        <p class="tags">Under Processed</p>
+      </div>
+    </div>
+  </ion-col>
+  <ion-col size="4">
+    <div class="tagsdot">
+      <div>
+        <img style="width: 17px;
+        margin-top: 12px;" src="assets/images/greendot.png">
+      </div>
+      <div>
+        <p class="tags">Approved</p>
+      </div>
+    </div>
+  </ion-col>
+  <ion-col size="4">
+    <div class="tagsdot">
+      <div>
+        <img style="width: 15px;
+        margin-top: 13px;" src="assets/images/reddot.png">
+      </div>
+      <div>
+        <p class="tags">Disapproved</p>
+      </div>
+    </div>
+
+  </ion-col>
+</ion-row>
+
+
+
+
+<ion-content>
+
+  <ion-row class="row">
+    <ion-col size="2">
+      <p>Date</p>
+    </ion-col>
+    <ion-col size="2">
+      <p>Product Name</p>
+    </ion-col>
+    <ion-col size="2">
+      <p>Invoice No.</p>
+    </ion-col>
+    <ion-col size="2">
+      <p>Sale Amount</p>
+    </ion-col>
+    <ion-col size="2">
+      <p>Point Added</p>
+    </ion-col>
+    <ion-col size="2">
+      <p>Status</p>
+    </ion-col>
+  </ion-row>
+  <!-- data -->
+  <div *ngFor="let item of activityData">
+    <!-- <div *ngFor="let activityData of activityData"> -->
+    <ion-row class="row1">
+      <ion-col size="2">
+        <h5>{{item.date |  date: 'dd/MMMM'}}</h5>
+      </ion-col>
+      <ion-col size="2">
+        <h5>{{item.customer_name}}</h5>
+      </ion-col>
+      <ion-col size="2">
+        <h5>{{item.invoice_no}}</h5>
+      </ion-col>
+      <ion-col size="2">
+        <h5>{{item.total_bill_value}}</h5>
+      </ion-col>
+      <ion-col size="2">
+        <h5>---</h5>
+      </ion-col>
+      <ion-col size="2">
+        <h5>---</h5>
+      </ion-col>
+    </ion-row>
+    <!-- </div> -->
+  </div>
+</ion-content>

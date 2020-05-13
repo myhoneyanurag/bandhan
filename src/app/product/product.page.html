@@ -1,0 +1,77 @@
+<ion-toolbar>
+  <!-- <ion-header>
+    <ion-row>
+      <ion-col size="2">
+        <ion-menu-button>
+          <ion-icon name="options-outline" style="font-size: 25px; color: #000;"></ion-icon>
+        </ion-menu-button>
+      </ion-col>
+      <ion-col size="8">
+        <ion-title style="padding: 0px!important;" class="ion-text-center">Product Catalog</ion-title>
+      </ion-col>
+      <ion-col style="top: 5px;left: 20px;" size="2" (click)="onNotify()">
+        <ion-icon name="notifications" class="icon"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-header> -->
+
+  <ion-row>
+    <ion-col size="2">
+      <ion-menu-button>
+        <ion-icon slot="start" name="options-outline" style="font-size: 25px; color: #000;"></ion-icon>
+      </ion-menu-button>
+    </ion-col>
+    <ion-col size="8">
+      <ion-title style="padding: 8px;" class="ion-text-center" color="light">Product Catalog</ion-title>
+    </ion-col>
+    <ion-col size="2" (click)="onNotify()">
+      <ion-icon style="padding: 10px;" name="notifications" class="icon"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-select style="top: -1px; border: 1px solid;" placeholder="Select Company">
+          <ion-select-option value="f">Tata</ion-select-option>
+          <ion-select-option value="m">Birla</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col size="6">
+        <div style="display: flex;justify-content: space-betweens;border: 1px solid;">
+          <div>
+            <ion-input placeholder="Search" [(ngModel)]="searchfilter"></ion-input>
+          </div>
+          <div style="margin-top: 10px;margin-right: 5px;" (click)="search(searchfilter)">
+            <ion-icon name="search"></ion-icon>
+          </div>
+        </div>
+
+        <!-- <ion-searchbar mode="ios"></ion-searchbar>
+        <ion-icon ios="ios-search" md="md-search"></ion-icon> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngFor="let item of list">
+    <ion-row>
+      <ion-col size="3">
+        <img *ngIf="item.images == null" class="productImg" src="assets/icon/product1.png">
+        <img class="productImg" src="{{item.images}}">
+      </ion-col>
+      <ion-col size="6" (click)="gotoDesc(item.id)">
+        <h2 class="proName">{{item.name}}</h2>
+        <p class="code">Product code : {{item.sku}}</p>
+      </ion-col>
+      <ion-col size="3">
+        <p class="date">{{item.created_at | date: 'dd-MMMM-yyyy'}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

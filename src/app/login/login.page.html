@@ -1,0 +1,59 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <form [formGroup]="signUpForm">
+    <img src="assets/icon/logo2.png">
+    <h3>Sign In</h3><br><br>
+    <ion-item>
+      <ion-input placeholder="Mobile/Email" minlength="10" type="text" formControlName="email"
+        ng-model="input.Mobile/Email"></ion-input>
+      <ion-icon name="person" slot="end" class="icon"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="signUpForm.get('email').errors && signUpForm.get('email').touched || signUpForm.get('email').dirty">
+      <div *ngIf="signUpForm.controls['email'].hasError('required')"><span class="validateMessage">*Please fill out this
+          field</span></div>
+    </div>
+
+    <!-- <ion-item>
+      <ion-input placeholder="Password" type="password" id="password" formControlName="password"></ion-input>
+      <ion-icon name="eye" slot="end" class="icon" onclick="if (password.type == 'text') password.type = 'password';
+      else password.type = 'text';"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="signUpForm.get('password').errors && signUpForm.get('password').touched || signUpForm.get('password').dirty">
+      <div *ngIf="signUpForm.controls['password'].hasError('required')"><span class="validateMessage">*Please fill out
+          this
+          field</span></div>
+    </div> -->
+
+    <!-- <div style="text-align: end;margin-right: 15px;">
+      <ion-label>Forgot Password?</ion-label>
+    </div> -->
+    <ion-button mode="ios" expand="block" size="large" (click)="onsignIn('fromLogin')">Sign In</ion-button>
+    <p class="p">Sign In With Social Accounts </p>
+
+  </form>
+
+  <ion-row style="margin-top: 25px;">
+    <ion-col size="4">
+
+    </ion-col>
+    <ion-col size="2" class="col" (click)="loginFb()">
+      <img src="assets/icon/fb.png" class="img">
+    </ion-col>
+    <ion-col size="2" class="col" (click)="googleLogin()">
+      <img src="assets/icon/goggle.png" class="img">
+    </ion-col>
+    <ion-col size="4">
+
+    </ion-col>
+  </ion-row>
+  <p style="text-align: center;font-size: 14px; margin-top: 5%;">Don't have an account?
+    <ion-label class="la" (click)="onSignUp()">SIGN UP</ion-label>
+  </p>
+</ion-content>

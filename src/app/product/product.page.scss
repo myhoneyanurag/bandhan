@@ -1,0 +1,44 @@
+ion-toolbar {
+    --background: rgb(50, 150, 153);
+}
+
+.productImg {
+    width: 80px;
+}
+
+.proName {
+    font-size: 18px;
+    color: #464646;
+    font-weight: 600;
+}
+
+.new-background-color {
+    --background: #329699;
+}
+
+.code {
+    margin-top: 0px;
+    font-size: 11px;
+}
+
+ion-select {
+    --padding-start: 0px;
+    border-bottom: 1px solid #cecece;
+}
+
+ion-searchbar {
+    padding: 0;
+    --background: none;
+    border-bottom: 1px solid #cecece;
+    ;
+    height: 39px;
+    text-align: left;
+}
+
+.date {
+    font-size: 10px;
+}
+
+.mainSearch {
+    position: relative;
+}

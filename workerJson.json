@@ -1,0 +1,46 @@
+{
+    "success": 1,
+    "message": "WorkerTypes retuned successfully!",
+    "data": {
+        "meta": {
+            "current_page": 1,
+            "last_page": 1,
+            "per_page": 15,
+            "has_more_pages": false,
+            "total": 6,
+            "count": 6
+        },
+        "data": [{
+                "id": 1,
+                "name": "Mation",
+                "active": 1
+            },
+            {
+                "id": 2,
+                "name": "Plumber",
+                "active": 1
+            },
+            {
+                "id": 3,
+                "name": "Mistri",
+                "active": 1
+            },
+            {
+                "id": 4,
+                "name": "Marbels & Granite",
+                "active": 1
+            },
+            {
+                "id": 5,
+                "name": "Electrician",
+                "active": 1
+            },
+            {
+                "id": 6,
+                "name": "Others",
+                "active": 1
+            }
+        ]
+    },
+    "aditional_data": null
+}

@@ -1,0 +1,50 @@
+.icon{
+    margin-right: 10px;
+    font-size: 25px;
+    color: white;
+}
+ion-toolbar{
+    --background: rgb(50, 150, 153);
+}
+super-tabs-toolbar{
+    --ion-color-light-contrast: rgb(50, 150, 153);
+    --ion-color-base: #fff !important;
+
+}
+p{
+    margin-left: 5px;
+    font-size: smaller;
+}
+ion-radio{
+    --color-checked:rgb(50, 150, 153);
+}
+ion-item{
+    --border-color: white;
+}
+ion-card{
+    background: rgb(50, 150, 153);
+    margin: 0;
+}
+h3{
+text-align: center;
+color: white;
+}
+.p1{
+    text-align: center;
+    color: white;
+}
+.btn{
+    --background: rgb(50, 150, 153);
+    text-transform: none;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+ion-select{
+    --padding-end:true;
+    max-width: fit-content;
+}
+.col{
+    padding: 0;
+    text-align: -webkit-center;
+}

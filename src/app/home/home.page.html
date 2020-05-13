@@ -1,0 +1,70 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col size="2">
+      <ion-menu-button>
+        <ion-icon name="options-outline" style="font-size: 25px; color: #000;"></ion-icon>
+      </ion-menu-button>
+    </ion-col>
+    <ion-col size="8">
+
+    </ion-col>
+    <ion-col size="2" style="text-align: center;" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-slides pager="true">
+    <ion-slide (click)="gotoPersonal()">
+      <img src="assets/icon/Banner1.png" class="slide-img">
+    </ion-slide>
+    <ion-slide (click)="gotoUpload()">
+      <img src="assets/icon/Banner2.png" class="slide-img">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-row style="margin-top: 25px;">
+
+    <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+      <ion-card (click)="onUpload()">
+        <img src="assets/icon/cat1.svg" class="img">
+        <p>UPLOAD</p>
+        <p>ACTIVITIES</p>
+      </ion-card>
+    </ion-col>
+
+    <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+      <ion-card (click)="myPoints()">
+        <img src="assets/icon/cat2.svg" class="img">
+        <p>YOUR</p>
+        <p>POINTS</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+
+    <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+      <ion-card (click)="onScheme()">
+        <img src="assets/icon/cat3.svg" class="img">
+        <p>NEW</p>
+        <p>SCHEMES</p>
+      </ion-card>
+    </ion-col>
+
+    <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+      <ion-card (click)="onRank()">
+        <img src="assets/icon/cat4.svg" class="img">
+        <p>CURRENT</p>
+        <p>RANK</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

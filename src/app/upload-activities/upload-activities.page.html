@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <ion-icon name="options-outline" color="light"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Upload Activities</ion-title>
+    <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="uploadActivity">
+    <ion-item>
+      <ion-datetime style="padding:0px" placeholder="Date" name="date" displayFormat="DD/MMM/YYYY" [max]="maxDate"
+        formControlName="dob" value="date">
+        {{birthDate}}
+      </ion-datetime>
+      <ion-icon name="calendar-outline" slot="end" class="icon1"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="uploadActivity.get('dob').errors && uploadActivity.get('dob').touched || uploadActivity.get('dob').dirty">
+      <div *ngIf="uploadActivity.controls['dob'].hasError('required')"><span style="color:red;font-size:12px">*
+          Field is required</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Invoice No." type="text" formControlName="invoiceno"></ion-input>
+    </ion-item>
+    <!-- <div style="padding-left: 35px;"
+      *ngIf="uploadActivity.get('invoice').errors && uploadActivity.get('invoice').touched || uploadActivity.get('invoice').dirty">
+      <div *ngIf="uploadActivity.controls['invoice'].hasError('required')"><span style="color:red;font-size:12px">
+          *Please fill out this field</span></div>
+      <div *ngIf="uploadActivity.controls['invoice'].hasError('pattern')"><span style="color:red;font-size:12px">
+          *Please enter the valid invoice no.</span></div>
+    </div> -->
+
+    <ion-item>
+      <ion-input placeholder="Customer Name" type="text" formControlName="nameofcustomer" minlength="3"></ion-input>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="uploadActivity.get('nameofcustomer').errors && uploadActivity.get('nameofcustomer').touched || uploadActivity.get('nameofcustomer').dirty">
+      <div *ngIf="uploadActivity.controls['nameofcustomer'].hasError('required')"><span
+          style="color:red;font-size:12px">
+          *Please fill out this field</span></div>
+      <!-- <div *ngIf="uploadActivity.controls['nameofcustomer'].hasError('pattern')"><span style="color:red;font-size:12px">
+          *You have entered the invalid invoice no. Please try again.</span></div> -->
+      <div *ngIf="uploadActivity.controls['nameofcustomer'].hasError('minlength')"><span
+          style=" color:red;font-size:12px">
+          *Customer Name must be at least 3 characters long.</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Customer Mobile No." type="tel" formControlName="mobileno" minlength="10" maxlength="10">
+      </ion-input>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="uploadActivity.get('mobileno').errors && uploadActivity.get('mobileno').touched || uploadActivity.get('mobileno').dirty">
+      <div *ngIf="uploadActivity.controls['mobileno'].hasError('required')"><span style="color:red;font-size:12px">
+          *Please fill out this field</span></div>
+      <div
+        *ngIf="uploadActivity.controls['mobileno'].hasError('pattern')&&uploadActivity.controls['mobileno'].hasError('minlength') && uploadActivity.controls['mobileno'].hasError('maxlength')">
+        <span style="color:red;font-size:12px">
+          *Please enter the valid Mobile no.</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="total Bill Value" type="text" formControlName="billvalue"></ion-input>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="uploadActivity.get('billvalue').errors && uploadActivity.get('billvalue').touched || uploadActivity.get('billvalue').dirty">
+      <div *ngIf="uploadActivity.controls['billvalue'].hasError('required')"><span style="color:red;font-size:12px">
+          *Please fill out this field</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Total Product Value" type="number" formControlName="productValue"></ion-input>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="uploadActivity.get('productValue').errors && uploadActivity.get('productValue').touched || uploadActivity.get('productValue').dirty">
+      <div *ngIf="uploadActivity.controls['productValue'].hasError('required')"><span style="color:red;font-size:12px">
+          *Please fill out this field</span></div>
+    </div>
+    <ion-list>
+      <ion-item (click)="product()">
+        <ion-label>Select Produt</ion-label>
+        <ion-select (ionChange)="Change($event)">
+          <ion-select-option *ngFor="let types of product_list" [value]=types.id>
+            {{types.name}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <div>
+      <ion-button class="upload" fill="outline" style="font-size: x-small" (click)="uploadFiles()">
+        <ion-icon name="cloud-upload"></ion-icon>
+        &nbsp;
+        Upload Invoice
+      </ion-button>
+      <div style="text-align: center;">
+        <p style="margin: 0px;">{{fileName}}</p>
+      </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit amet sint recusandae ullam dicta eos iste est
+      labore
+      illo nobis accusamus facilis fugit magni quo adipisci, ipsam illum saepe modi!</p>
+    <ion-button expand="block" size="large" class="btn" (click)="gotoHome()">Send To
+      manager</ion-button>
+
+  </form>
+
+</ion-content>

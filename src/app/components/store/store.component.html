@@ -1,0 +1,25 @@
+<div class="celebBackground">
+
+  <ion-card class="modalWrap">
+
+    <ion-card-header class="modalHeader">
+      <h2 class="modalTitle">Stores</h2>
+      <ion-icon class="modalClose" name="close" (click)="closeModal()"></ion-icon>
+    </ion-card-header>
+
+    <ion-card-content class="modalContent">
+      <ion-list>
+        <ion-radio-group (ionChange)="Change($event)">
+          <ion-item *ngFor="let types of storeData">
+            <ion-label>{{types.name}}</ion-label>
+            <ion-radio slot="end" [value]=types.id></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-card-content>
+
+    <ion-button color="primary" expand="block" class="modalButton ion-no-margin" (click)="sendToHome()">Send Request To
+      Administrator
+    </ion-button>
+  </ion-card>
+</div>

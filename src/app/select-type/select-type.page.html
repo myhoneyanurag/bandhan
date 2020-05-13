@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>select-type</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <!-- <p style="color: red;
+  position: absolute;
+  top: -7px;">Build Version:-0.7</p> -->
+  <img src="assets/icon/logo1.png">
+  <div class="man-btn" (click)="onManager()">
+    <ion-row>
+      <ion-col size="4" class="ion-text-end">
+        <ion-icon name="home" style="font-size: 25px;"></ion-icon>
+      </ion-col>
+      <ion-col size="8">
+        <p>
+          Sign In As Store Manager
+        </p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div expand="block" size="large" class="work-btn" (click)="onWorker()">
+    <ion-row>
+      <ion-col size="4" class="ion-text-end">
+        <ion-icon name="person" style="font-size: 25px;"></ion-icon>
+      </ion-col>
+      <ion-col size="8">
+        <p>
+          Sign In As Worker
+        </p>
+      </ion-col>
+    </ion-row>
+  </div>
+  <p style="text-align: center;font-size: 12px;margin-top: 10%;">Don't have an account?
+    <ion-label class="la" (click)="onSignUp()">SIGN UP</ion-label>
+  </p>
+
+</ion-content>

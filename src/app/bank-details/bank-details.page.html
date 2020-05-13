@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" color="light">Bank Details</ion-title>
+    <!-- <ion-buttons slot="end" (click)="onNotify()">
+      <ion-icon name="notifications" class="icon"></ion-icon>
+    </ion-buttons> -->
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="bankdetails">
+    <ion-item>
+      <ion-input placeholder="Account Holder Name" type="text" formControlName="accholdername"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="bankdetails.get('accholdername').errors && bankdetails.get('accholdername').touched || bankdetails.get('accholdername').dirty">
+      <div *ngIf="bankdetails.controls['accholdername'].hasError('required')"> <span class="validateMessage">
+          *Please fill out this field</span></div>
+      <div *ngIf="bankdetails.controls['accholdername'].hasError('minlength') ">
+        <span class="validateMessage">
+          *First name must be at least 3 characters long.</span></div>
+      <div *ngIf="bankdetails.controls['accholdername'].hasError('pattern') ">
+        <span class="validateMessage">
+          *Please enter valid name.</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Account No" type="text" formControlName="accountno"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="bankdetails.get('accountno').errors && bankdetails.get('accountno').touched || bankdetails.get('accountno').dirty">
+      <div *ngIf="bankdetails.controls['accountno'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Confirm Account No" type="text" fromControlName="confrmAccountNo"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="bankdetails.get('confrmAccountNo').errors && bankdetails.get('confrmAccountNo').touched || bankdetails.get('confrmAccountNo').dirty">
+      <div *ngIf="bankdetails.controls['confrmAccountNo'].hasError('required')"> <span class="validateMessage">
+          *Please fill out this field</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Bank Name" type="text" fromControlName="bankname"></ion-input>
+    </ion-item>
+    <div
+      *ngIf="bankdetails.get('bankname').errors && bankdetails.get('bankname').touched || bankdetails.get('bankname').dirty">
+      <div *ngIf="bankdetails.controls['bankname'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="Bank Address" type="text" fromControlName="bankAddress"></ion-input>
+    </ion-item>
+    <div style="padding-left: 20px;"
+      *ngIf="bankdetails.get('bankAddress').errors && bankdetails.get('bankAddress').touched || bankdetails.get('bankAddress').dirty">
+      <div *ngIf="bankdetails.controls['bankAddress'].hasError('required')"> <span class="validateMessage"> *Please
+          fill out this field</span></div>
+    </div>
+    <ion-item>
+      <ion-input placeholder="IFSC Code" type="text" formControlName="ifsc"></ion-input>
+    </ion-item>
+    <div style="padding-left: 20px;"
+      *ngIf="bankdetails.get('ifsc').errors && bankdetails.get('ifsc').touched || bankdetails.get('ifsc').dirty">
+      <div *ngIf="bankdetails.controls['ifsc'].hasError('required')"> <span class="validateMessage">*Please fill
+          out this field</span></div>
+      <div *ngIf="bankdetails.controls['ifsc'].hasError('pattern') ">
+        <span class="validateMessage">
+          *Please enter valid IFSC code.</span></div>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button class="upload" fill="outline" style="font-size: x-small" (click)="galleryfnc()">
+            <ion-icon name="cloud-upload"></ion-icon>
+            &nbsp;
+            Upload Bank Document
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <p style="font-size: 12px">Document:</p>
+          <p style="font-size: 12px;">Cheque Photo or Passbook Copy</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-row>
+      <ion-col size="1">
+        <ion-radio-group>
+          <ion-radio mode="md" style="margin-top: 3px;"></ion-radio>
+        </ion-radio-group>
+      </ion-col>
+      <ion-col size="11">
+        <p style="margin-top: 5px;">I dont have Bank Account</p>
+      </ion-col>
+    </ion-row>
+    <div style="text-align: center;">
+      <button class="saveSign" mat-raised-button matStepperNext class="nav-btn pull-right"
+        (click)="onNext()">Save</button>
+      <!-- [disabled]="!bankdetails.valid" -->
+    </div>
+  </form>
+</ion-content>

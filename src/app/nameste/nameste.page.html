@@ -1,0 +1,67 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>waiting-approval</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+
+<ion-content (click)="presentAlert()">
+  <img style="height: 110px;
+  width: 100%;" src="assets/icon/logo2.png">
+  <div class="div">
+    <img style="width: 127px;" class="nam" src="assets/icon/nameste.png">
+    <div style="text-align: center; ">
+      <p class="nam" style="padding: 19px;
+      line-height: 23px;"> Your registration request for True Homes Bandhan is
+        successfully sent to Level 1 manager. And it may
+        take 1-2 business days for verification.
+      </p>
+    </div>
+  </div>
+  <ion-footer>
+  </ion-footer>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+
+  <!-- <ion-row style="margin-top: 25px;">
+
+    <ion-col size="6" style="padding-left: 25px;padding-right: 0;">
+      <ion-card class="notif" (click)="Notification()">
+        <p style="color: #fff;">See Notification</p>
+      </ion-card>
+    </ion-col>
+
+    <ion-col size="6" style="padding-right: 25px;padding-left: 0;">
+      <ion-card class="work" (click)="needWork()">
+        <p style="color: #fff;">Need Work</p>
+      </ion-card>
+    </ion-col>
+  </ion-row> -->
+
+  <ion-row style="margin-top: 25px; width: 100%;padding: 20px;">
+
+    <ion-col size="6">
+      <div class="card" (click)="Notification()">
+        <div>
+          <ion-icon style="width: 40px!important" name="notifications" class="icon"></ion-icon>
+
+        </div>
+        <p style="color: #fff;">Notification</p>
+      </div>
+    </ion-col>
+
+    <ion-col size="6">
+      <div class="card" (click)="needWork()">
+        <div>
+          <img style="width: 40px;" src="assets/icon/hand.png">
+        </div>
+        <p style="color: #fff;">Need Work</p>
+      </div>
+    </ion-col>
+  </ion-row>
+
+
+</ion-footer>

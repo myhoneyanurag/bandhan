@@ -1,0 +1,25 @@
+import { environment } from './../environments/environment';
+
+export const appApiResources = {
+    baseUrl: environment.baseUrl,
+    sidenavUrl: 'http://127.0.0.1:8000/api/v1/',
+    signIn: 'worker/signin',
+    signUp: 'worker/signup',
+    verifyOtp: 'worker/verify-otp',
+    resendOtp: 'worker/resend-otp',
+    login: 'login',
+    logout: 'worker/logout',
+    usersInfo: 'worker/update-all-details',
+    addactivity: 'activity/add',
+    fetchactivity: 'activity/fetch',
+    updateActivity: 'update/activity/status',
+    workerAs: 'worker-types',
+    product: 'worker/products/all',
+    getStore: 'stores/list',
+    getSchemes: 'scheme/fetch',
+    changeMobileNumber: 'worker/privacy-update',
+    changeStore: 'worker/switch-store',
+    updateMobile: 'worker/privacy-update',
+    notification: 'users/notification',
+    points: 'points/',
+}

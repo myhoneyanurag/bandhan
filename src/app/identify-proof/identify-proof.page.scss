@@ -1,0 +1,87 @@
+.icon {
+    font-size: 90px;
+    color: rgb(50, 150, 153);
+}
+
+.icon1 {
+    font-size: 15px;
+    color: black;
+}
+
+ion-item {
+    margin-bottom: 20px;
+    //  margin-left: 15px;
+    // margin-right: 15px;
+    --highlight-color-focused: rgb(50, 150, 153);
+    --border-color: black;
+    --padding-start: 0x;
+}
+
+.radio {
+    --border-style: none;
+}
+
+ion-radio {
+    --color-checked: rgb(50, 150, 153);
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    color: white;
+    background: rgb(50, 150, 153);
+    border-radius: 10px;
+    font-size: medium;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(50, 150, 153);
+}
+
+.mat-step-header .mat-step-icon-selected,
+.mat-step-header .mat-step-icon-state-done,
+.mat-step-header .mat-step-icon-state-edit {
+    background-color: rgb(50, 150, 153);
+    color: #fff;
+}
+
+mat-step {
+    background-color: rgb(50, 150, 153);
+}
+
+form {
+    padding: 25px;
+}
+
+ion-button.saveSign {
+    font-size: medium;
+    margin-top: 40px;
+    --background: #156D89;
+    width: 100%;
+    height: 65px;
+    margin: 40px auto;
+}
+
+.new-background-color {
+    --background: #329699;
+}
+
+.pointsLine {
+    font-size: 13px;
+    color: #2a2a2a;
+    font-weight: bolder;
+    border: 1px solid #cecece;
+    padding: 20px;
+    border-style: dashed;
+}
+
+ion-button.upload {
+    height: 38px;
+    font-size: 13px;
+}
+
+::ng-deep .mat-horizontal-stepper-header {
+    pointer-events: none !important;
+}

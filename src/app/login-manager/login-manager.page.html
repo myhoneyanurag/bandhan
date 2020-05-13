@@ -1,0 +1,58 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login-manager</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <form [formGroup]="loginManager">
+    <img src="assets/icon/logo2.png">
+    <h3>Sign In </h3><br><br>
+
+    <ion-item>
+      <ion-input placeholder="Mobile/Email" type="text" formControlName="mobEmail"></ion-input>
+      <ion-icon name="person" slot="end" class="icon"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="loginManager.get('mobEmail').errors && loginManager.get('mobEmail').touched || loginManager.get('mobEmail').dirty">
+      <div *ngIf="loginManager.controls['mobEmail'].hasError('required')"><span style="color:red;font-size: 12px">
+          *Please fill out this field.</span></div>
+    </div>
+
+    <ion-item>
+      <ion-input placeholder="Password" type="password" formControlName="password"></ion-input>
+      <ion-icon name="eye" slot="end" class="icon"></ion-icon>
+    </ion-item>
+    <div style="padding-left: 35px;"
+      *ngIf="loginManager.get('password').errors && loginManager.get('password').touched || loginManager.get('password').dirty">
+      <div *ngIf="loginManager.controls['password'].hasError('required')"><span style="color:red;font-size: 12px">
+          *Please fill out this field.</span></div>
+    </div>
+
+    <div style="text-align: end;margin-right: 15px;">
+      <ion-label>Forgot Password?</ion-label>
+    </div>
+    <ion-button expand="block" size="large" (click)="onLogIn()">Sign In</ion-button>
+    <br><br>
+    <p class="p">Sign In With Social Accounts </p>
+
+    <ion-row style="margin-top: 25px;">
+      <ion-col size="4">
+
+      </ion-col>
+      <ion-col size="2" class="col">
+        <img src="assets/icon/fb.png" class="img">
+      </ion-col>
+      <ion-col size="2" class="col">
+        <img src="assets/icon/goggle.png" class="img">
+      </ion-col>
+      <ion-col size="4">
+
+      </ion-col>
+    </ion-row>
+    <p style="text-align: center;font-size: 12px;margin-top: 5%;">Don't have an account?
+      <ion-label class="la">SIGN UP</ion-label>
+    </p>
+  </form>
+
+</ion-content>

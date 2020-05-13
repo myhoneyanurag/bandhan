@@ -1,0 +1,134 @@
+<ion-app>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-content>
+      <div class="div1">
+        <ion-row>
+          <ion-col size="5" style="text-align: center;">
+            <img src="assets/icon/pr1.jpg" class="img">
+          </ion-col>
+          <ion-col size="7" style="align-self: center;">
+            <h2>{{Name1}} {{Name2}}</h2>
+            <p>Group:Silver</p>
+          </ion-col>
+        </ion-row>
+      </div><br>
+      <ion-item (click)="onHome()">
+        <ion-icon name="home-outline" slot="start" class="icon"></ion-icon>
+        <h5>Home</h5>
+      </ion-item>
+      <ion-item (click)="product()">
+        <ion-icon name="logo-buffer" slot="start" class="icon"></ion-icon>
+        <h5>Products Catalog</h5>
+      </ion-item>
+      <ion-item (click)="onNotifications()">
+        <ion-icon name="notifications" slot="start" class="icon"></ion-icon>
+        <h5>Notifications</h5>
+      </ion-item>
+      <ion-item (click)="onMyActivity()">
+        <ion-icon name="pulse" slot="start" class="icon"></ion-icon>
+        <h5>My Activities</h5>
+      </ion-item>
+      <ion-item (click)="onMyPoints()">
+        <ion-icon name="albums" slot="start" class="icon"></ion-icon>
+        <h5>My Points</h5>
+      </ion-item>
+      <ion-item (click)="onSchemes()">
+        <ion-icon name="pricetag" slot="start" class="icon"></ion-icon>
+        <h5>Schemes</h5>
+      </ion-item>
+      <!-- <ion-item (click)="group()">
+        <ion-icon name="layers" slot="start" class="icon"></ion-icon>
+        <h5>Groups</h5>
+      </ion-item> -->
+      <ion-item (click)="onFeed()">
+        <ion-icon name="planet" slot="start" class="icon"></ion-icon>
+        <h5>Social feeds</h5>
+      </ion-item>
+      <ion-item (click)="onAbout()">
+        <ion-icon name="apps" slot="start" class="icon"></ion-icon>
+        <h5>About Us</h5>
+      </ion-item>
+      <ion-item (click)="onSettings()">
+        <ion-icon name="settings" slot="start" class="icon"></ion-icon>
+        <h5>Settings</h5>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-icon name="sync" slot="start" class="icon"></ion-icon>
+        <h5>what's New</h5>
+      </ion-item> -->
+      <ion-item (click)="store('sidebar')">
+        <ion-icon name="power" slot="start" class="icon"></ion-icon>
+        <h5>Switch Account(Store Manager)</h5>
+      </ion-item>
+      <ion-item (click)="onLogOut()">
+        <ion-icon name="log-out" slot="start" class="icon"></ion-icon>
+        <h5>Logout</h5>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+
+  <!-- <ion-menu side="start" menuId="second" contentId="main">
+    <ion-content>
+      <div class="div1">
+        <ion-row>
+          <ion-col size="5" style="text-align: center;">
+            <img src="assets/icon/pr1.jpg" class="img">
+          </ion-col>
+          <ion-col size="7" style="align-self: center;">
+            <h2>manager Name</h2>
+          </ion-col>
+        </ion-row>
+      </div><br>
+      <ion-item (click)="onHomeMan()">
+        <ion-icon name="home-outline" slot="start" class="icon"></ion-icon>
+        <h5>Home</h5>
+      </ion-item>
+
+      <ion-item (click)="onNotificationsMan()">
+        <ion-icon name="notifications" slot="start" class="icon"></ion-icon>
+        <h5>Notifications</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="pulse" slot="start" class="icon"></ion-icon>
+        <h5>Worker Activities</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="albums" slot="start" class="icon"></ion-icon>
+        <h5>Redeem Points</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="pricetag" slot="start" class="icon"></ion-icon>
+        <h5>All Schemes</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="layers" slot="start" class="icon"></ion-icon>
+        <h5>Groups</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="planet" slot="start" class="icon"></ion-icon>
+        <h5>Social feeds</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="apps" slot="start" class="icon"></ion-icon>
+        <h5>About Us</h5>
+      </ion-item>
+      <ion-item (click)="onSettingsMan()">
+        <ion-icon name="settings" slot="start" class="icon"></ion-icon>
+        <h5>Settings</h5>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="sync" slot="start" class="icon"></ion-icon>
+        <h5>what's New</h5>
+      </ion-item>
+      <ion-item (click)="store()">
+        <ion-icon name="power" slot="start" class="icon"></ion-icon>
+        <h5>Switch Account(Store)</h5>
+      </ion-item>
+      <ion-item (click)="onLogOut()">
+        <ion-icon name="log-out" slot="start" class="icon"></ion-icon>
+        <h5>Logout</h5>
+      </ion-item>
+    </ion-content>
+  </ion-menu> -->
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

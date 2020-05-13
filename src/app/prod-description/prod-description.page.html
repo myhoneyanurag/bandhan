@@ -1,0 +1,64 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="product"></ion-back-button>
+  </ion-buttons>
+  <ion-title class="ion-text-center" color="light">Product Description</ion-title>
+  <ion-icon style="padding: 10px;" slot="end" name="notifications" class="icon" (click)="onNotify()"></ion-icon>
+
+</ion-toolbar>
+
+<ion-content>
+  <div>
+    <h2 style="margin-left: 6px;" class="proName">{{details.name}}</h2>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <div>
+          <img style="width: 70%;" class="productImg" src="assets/icon/product1.png">
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div style="text-align: center;">
+          <div>
+            <img style="width: 35%;" class="productImg" src="assets/icon/product1.png">
+          </div>
+          <div>
+            <img style="width: 35%;" class="productImg" src="assets/icon/product1.png">
+          </div>
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <!-- <div>
+    <div>
+      <img style="width: 20%;" class="productImg" src="assets/icon/product1.png">
+    </div>
+    <div>
+      <img style="width: 20%;" class="productImg" src="assets/icon/product1.png">
+    </div>
+  </div> -->
+
+
+  <div style="display: flex;justify-content: space-between;margin: 15px;">
+    <div>
+      <p style="font-size: small;
+      font-weight: 600;" class="code">Product code : {{details.sku}}</p>
+    </div>
+    <div>
+      <p style="font-size: small;
+      font-weight: 600;" class="code">21-may-2020</p>
+    </div>
+  </div>
+  <div style="margin: 13px;">
+    <p>
+      {{details.details}}
+    </p>
+  </div>
+
+</ion-content>
